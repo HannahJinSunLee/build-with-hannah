@@ -33,13 +33,10 @@ jobs:
       - name: Lint
         run: npm run lint
 
-      - name: Build and Export
+      - name: Build (static export)
         env:
           NEXT_PUBLIC_BASE_PATH: "/build-with-hannah"
         run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -48,7 +48,7 @@ export default function HomePage() {
 
           <div className="hero-image">
             <Image
-              src="/assets/images/hannah-luna.jpeg"
+              src="/public/assets/images/hannah-luna.jpeg"
               alt="Hannah working with Luna beside her"
               width={840}
               height={960}
