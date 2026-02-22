@@ -1,65 +1,205 @@
+import Link from "next/link";
 import Image from "next/image";
+import { journalPosts } from "../lib/journal";
 
-export default function Home() {
+export const metadata = {
+  title: "Build with Hannah",
+  description:
+    "This is where I rebuild. Learning in public, building projects, and proving that starting again is possible.",
+  openGraph: {
+    title: "Build with Hannah",
+    description:
+      "This is where I rebuild. Learning in public, building projects, and proving that starting again is possible.",
+    images: ["/assets/images/hannah-luna.jpeg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Build with Hannah",
+    description:
+      "This is where I rebuild. Learning in public, building projects, and proving that starting again is possible.",
+    images: ["/assets/images/hannah-luna.jpeg"],
+  },
+};
+
+export default function HomePage() {
+  const recentPosts = journalPosts.slice(0, 3);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <>
+      <section className="hero section">
+        <div className="container hero-inner">
+          <div className="hero-text">
+            <p className="eyebrow">Welcome to my online journal.</p>
+            <h1 className="hero-title">Hello, I&apos;m Hannah</h1>
+            <p>
+              This is where I&apos;m learning in public, building projects, and proving that starting again is possible. My cat Luna is here to support every restart and every small win.
+            </p>
+            <p className="hero-note">If you feel late or stuck, you are not alone.</p>
+
+            <div className="hero-actions">
+              <Link className="btn btn-primary" href="/work-with-me">
+                Work With Me
+              </Link>
+              <Link className="btn btn-secondary" href="/start-here">
+                Start Here
+              </Link>
+            </div>
+          </div>
+
+          <div className="hero-image">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/assets/images/hannah-luna.jpeg"
+              alt="Hannah working with Luna beside her"
+              width={840}
+              height={960}
+              priority
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2>Why This Site Exists</h2>
+          </div>
+          <div className="card">
+            <p className="muted">
+              For a long time, I was working and getting by, but I was not building anything that felt like mine. I
+              kept telling myself I would start when I felt ready. I never felt ready.
+            </p>
+            <p className="muted">
+              I helped build other people&apos;s dreams. I paid the bills. I survived. But deep down, I knew I wanted
+              more.
+            </p>
+            <p className="muted">
+              This site is where I stop waiting. It is where I learn, build, make mistakes, and try again. Not
+              perfectly. Not all at once. Just consistently.
+            </p>
+            <p className="muted">
+              If you feel like you are behind or starting over, I hope this space reminds you that it is not too late.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2>How I Can Help</h2>
+            <Link className="text-link" href="/work-with-me">
+              See all packages
+            </Link>
+          </div>
+          <p className="muted">If you need practical website help, these are the ways I can support you right now.</p>
+
+          <div className="card-grid offer-grid">
+            <article className="card">
+              <h3>Website Update Session</h3>
+              <p className="muted">Quick fixes and cleanups for an existing site.</p>
+              <p className="muted">Text, images, links, layout issues, and simple mobile improvements.</p>
+            </article>
+            <article className="card">
+              <h3>Simple Landing Page</h3>
+              <p className="muted">A clean one page site for one offer, service, or booking link.</p>
+              <p className="muted">Clear messaging, mobile friendly, and easy to manage.</p>
+            </article>
+            <article className="card">
+              <h3>Monthly Website Care</h3>
+              <p className="muted">
+                Ongoing support so your website stays updated without you worrying about it.
+              </p>
+              <p className="muted">Small updates, minor fixes, and consistent maintenance.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2>Rebuilding Together</h2>
+            <Link className="text-link" href="/start-here">
+              Follow the path
+            </Link>
+          </div>
+
+          <div className="split">
+            <article className="card">
+              <h3>My Journey Right Now</h3>
+              <p className="muted">
+                I am rebuilding step by step. I share my progress, my projects, and what I am learning as I go.
+                No pretending. Just real work.
+              </p>
+            </article>
+
+            <article className="card">
+              <h3>If You Are Rebuilding Too</h3>
+              <ul className="checklist">
+                <li>Read one honest entry this week</li>
+                <li>Choose one small promise and keep it for seven days</li>
+                <li>Use this site as proof you are not behind</li>
+              </ul>
+              <p>
+                <Link className="text-link" href="/journal">
+                  Read this week&apos;s entry
+                </Link>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-head">
+            <h2>Latest Journal Entries</h2>
+            <Link className="text-link" href="/journal">
+              See all
+            </Link>
+          </div>
+          <p className="muted">New entries as I build, learn, and level up.</p>
+
+          <div className="card-grid journal-grid">
+            {recentPosts.map((post) => (
+              <article key={post.slug} className="card card-link">
+                <p className="meta">
+                  {post.category} • {post.date}
+                </p>
+                <h3>
+                  <Link href={`/journal/${post.slug}`}>{post.title}</Link>
+                </h3>
+                {post.subtitle ? <p className="muted">{post.subtitle}</p> : null}
+                <p className="muted">{post.blurb}</p>
+                <p>
+                  <Link className="text-link" href={`/journal/${post.slug}`}>
+                    Read full entry
+                  </Link>
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="card reader-cta">
+            <h2>Get New Posts by Email</h2>
+            <p className="muted">
+              No spam. Just rebuild updates, project progress, and what I learn each week.
+            </p>
+            <p>
+              <a
+                className="btn btn-primary"
+                href="mailto:hannah@example.com?subject=Add%20me%20to%20Build%20with%20Hannah%20updates"
+              >
+                Join Updates
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
