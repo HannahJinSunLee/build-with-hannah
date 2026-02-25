@@ -44,16 +44,6 @@ export default function JournalClient({ posts }: Props) {
           ))}
         </div>
 
-        <article className="card">
-          <h3>Weekly Reset Checklist</h3>
-          <ul className="checklist">
-            <li>Write one honest entry about what worked and what did not</li>
-            <li>Ship one small change (code, copy, or layout)</li>
-            <li>Move for 20–30 minutes and log it</li>
-            <li>Choose one promise for the next 7 days</li>
-          </ul>
-        </article>
-
         {featured ? (
           <article className="card featured-post">
             <p className="meta">
