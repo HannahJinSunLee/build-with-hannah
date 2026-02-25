@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "Build with Hannah",
   description:
     "A real-time rebuild story: career reset, disciplined habits, and honest progress with Hannah and Luna.",
+  metadataBase: new URL("https://hannahjinsunlee.github.io/build-with-hannah"),
+  alternates: {
+    canonical: "https://hannahjinsunlee.github.io/build-with-hannah",
+  },
   openGraph: {
     title: "Build with Hannah",
     description:
