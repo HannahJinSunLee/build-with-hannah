@@ -184,24 +184,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container">
-          <div className="card reader-cta">
-            <h2>Get New Posts by Email</h2>
-            <p className="muted">
-              No spam. Just rebuild updates, project progress, and what I learn each week.
-            </p>
-            <p>
-              <a
-                className="btn btn-primary"
-                href="mailto:h.jlee1911@gmail.com?subject=Add%20me%20to%20Build%20with%20Hannah%20updates"
-              >
-                Join Updates
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
