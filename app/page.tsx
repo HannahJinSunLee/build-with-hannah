@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { journalPosts } from "../lib/journal";
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata = {
   title: "Build with Hannah",
   description:
@@ -48,7 +50,7 @@ export default function HomePage() {
 
           <div className="hero-image">
             <Image
-              src="/public/assets/images/hannah-luna.jpeg"
+              src={`${prefix}/assets/images/hannah-luna.jpeg`}
               alt="Hannah working with Luna beside her"
               width={840}
               height={960}
