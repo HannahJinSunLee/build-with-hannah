@@ -141,7 +141,7 @@ export default function WorkWithMePage() {
           <p>
             <a
               className="btn btn-primary"
-              href="mailto:hannah@example.com?subject=Website%20audit%20request"
+              href="mailto:h.jlee1911@gmail.com?subject=Website%20audit%20request"
             >
               Send Audit Request
             </a>

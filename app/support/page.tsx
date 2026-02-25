@@ -21,7 +21,7 @@ export default function SupportPage() {
             Send me an email and I will add you to my early reader list.
           </p>
           <p>
-            <a className="btn btn-primary" href="mailto:hannah@example.com?subject=Add%20me%20to%20Build%20with%20Hannah%20updates">
+            <a className="btn btn-primary" href="mailto:h.jlee1911@gmail.com?subject=Add%20me%20to%20Build%20with%20Hannah%20updates">
               Join Updates by Email
             </a>
           </p>

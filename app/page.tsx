@@ -194,7 +194,7 @@ export default function HomePage() {
             <p>
               <a
                 className="btn btn-primary"
-                href="mailto:hannah@example.com?subject=Add%20me%20to%20Build%20with%20Hannah%20updates"
+                href="mailto:h.jlee1911@gmail.com?subject=Add%20me%20to%20Build%20with%20Hannah%20updates"
               >
                 Join Updates
               </a>
