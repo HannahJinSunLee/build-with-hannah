@@ -31,11 +31,6 @@ export default function ResourcesPage() {
           <p className="muted">Simple tools. Real consistency.</p>
         </div>
 
-        <p className="muted disclosure">
-          Some links may become affiliate links in the future. If they do, I will
-          always mark them clearly.
-        </p>
-
         <div className="card-grid">
           {resources.map((item) => (
             <article key={item.name} className="card">
